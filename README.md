@@ -30,6 +30,27 @@ class ConcatedArxivResult:
 
 `ConcatedArxivResult`: A composite format that combines results across different search queries. This structure is instrumental in cross-comparing the prevalence of various keywords over time, facilitating a comprehensive trend analysis.
 
+### Repository Structure
+```bash
+/root
+│
+├── results/               # Directory containing datasets generated from the analysis.
+│
+├── analysis.png           # Visualization of the analysis results, highlighting key trends.
+│
+├── arxiv_analyzing.ipynb  # Jupyter notebook for performing the analysis on the dataset.
+│
+├── arxiv_scraping.ipynb   # Jupyter notebook containing code for scraping data from the arXiv website.
+│
+├── combine.ipynb          # Jupyter notebook used to concatenate individual result files into a single dataset.
+│
+├── arxiv_papers.csv       # The concatenated dataset resulting from the combine.ipynb process.
+│
+├── Pipfile                # Lists project dependencies to ensure a consistent environment.
+│
+└── README.md              # The top-level README providing an overview and guidance for navigating the project.
+```
+
 ## Analysis
 
 ![](./analysis.png)
