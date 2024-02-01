@@ -1,10 +1,10 @@
+# Analyzing Trends on the `arXiv` Website
+
 ## Introduction
 
-### purpose: The reason for analyzing `arxiv` webpage
+### Purpose: Analyzing Trends on the `arXiv` Website
 
-If you're a researcher, you've used the arxiv website.  
-I always follow the trend topic, but I couldn't confirm it as true even if I felt that the topic was a trend.  
-I wanted to check the thesis trend through a survey on the number of papers by keyword.
+As a researcher, staying abreast of the latest trends and developments in your field is crucial. While the arXiv website serves as a vital repository for this purpose, discerning emerging trends from the volume of publications can be challenging. This analysis aims to survey the proliferation of papers across various keywords, providing a data-driven overview of evolving research interests and technological advancements.
 
 ### data structure:
 ```python
@@ -26,22 +26,26 @@ class ConcatedArxivResult:
     submitted: str
     originally_announced: str
 ```
-ArxivResult is the result format for one search keyword.  
-ConcatedArxivResult is the concated format. (arxiv_papers.csv)
+`ArxivResult`: Represents individual search results, encapsulating metadata such as title, authors, and publication date. This structure is pivotal for analyzing trends within specific research domains.  
+
+`ConcatedArxivResult`: A composite format that combines results across different search queries. This structure is instrumental in cross-comparing the prevalence of various keywords over time, facilitating a comprehensive trend analysis.
 
 ## Analysis
 
 ![](./analysis.png)
-Methodologies that appeared before transformers, such as rnn, lstm, gru, and so on, appear to have fewer and fewer keywords.  
+The analysis reveals a notable shift in research focus areas, particularly with the advent of deep learning architectures and the subsequent rise of large language models (LLMs) and reinforcement learning techniques. Key observations include:  
 
-On the other hand, LLM and reinforcement learning, which are hot keywords in recent years, are showing a very high rise.  
+`2015 Milestone`: The introduction of ResNet marked a significant advancement in deep learning, catalyzing the development of deeper, more efficient models. (Computer Vision graph!)  
 
-### Interesting facts
-- LLM Keywords Surge As ChatGPT Arrives In 2023 And It's Widely Known
-- Models such as RNN, LSTM, and GRU were frequently used for natural language processing, but there are many studies on solutions through LLM prompting, so it is thought that the frequency of keywords is not high
+`2022-2023 LLM Surge`: The emergence of ChatGPT in 2023 and its widespread recognition underscored a dramatic increase in LLM-related research, highlighting the technology's transformative potential.  
 
-## Key Features (Scraping Method)
-### Fast Scraps with *Multi-Threading*
+`Decline of Traditional RNN-Based Models`: Once staples in natural language processing, RNNs, LSTMs, and GRUs have seen a decline in prominence, overshadowed by the versatility and efficacy of LLMs.
+
+## Methodological Insights
+### Fast, Efficient Data Scraping with Multi-Threading
+
+I employed multi-threading to expedite the data collection process, distributing queries across multiple threads to parallelize downloads and significantly reduce scraping time. While effective, this approach necessitates careful rate management to avoid overloading server resources or triggering IP bans.
+
 ```python
 ...
 
@@ -58,5 +62,8 @@ for i in range(N_THREADS):
 ...
 ```
 
-### Stable development through type hints
-- classes, `import typing`, ...
+### Ensuring Robust Development with Type Hints
+
+Type hints were extensively used to fortify the development process, enhancing code readability and reducing the likelihood of runtime errors. This practice was instrumental in ensuring the stability and reliability of my scraping tools, contributing to a smoother, more efficient data analysis workflow.
+
+- `class`, `import typing as T`, ...
