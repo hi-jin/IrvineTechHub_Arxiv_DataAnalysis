@@ -67,3 +67,6 @@ for i in range(N_THREADS):
 Type hints were extensively used to fortify the development process, enhancing code readability and reducing the likelihood of runtime errors. This practice was instrumental in ensuring the stability and reliability of my scraping tools, contributing to a smoother, more efficient data analysis workflow.
 
 - `class`, `import typing as T`, ...
+
+## Conclusion
+This analysis has made it evident that the intrigue surrounding large language models (LLMs) predated the public's fascination with ChatGPT, highlighting a significant trend within the research community. This realization emphasizes the importance of trend analysis in not only understanding the present but also in anticipating the future. Witnessing the gradual ascent of LLMs in research has reinforced my belief in the power of such analyses to prepare us for upcoming technological shifts. It's a compelling reminder that by staying informed about research trends, we can better navigate the evolving landscape of scientific inquiry and technological innovation.
