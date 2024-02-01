@@ -1,12 +1,12 @@
-# Introduction
+## Introduction
 
-## [purpose] The reason for analyzing `arxiv` webpage
+### purpose: The reason for analyzing `arxiv` webpage
 
 If you're a researcher, you've used the arxiv website.  
 I always follow the trend topic, but I couldn't confirm it as true even if I felt that the topic was a trend.  
 I wanted to check the thesis trend through a survey on the number of papers by keyword.
 
-## [structure]
+### data structure:
 ```python
 class ArxivResult:
     id: int
@@ -34,7 +34,11 @@ ConcatedArxivResult is the concated format. (arxiv_papers.csv)
 ![](./analysis.png)
 Methodologies that appeared before transformers, such as rnn, lstm, gru, and so on, appear to have fewer and fewer keywords.  
 
-On the other hand, LLM and reinforcement learning, which are hot keywords in recent years, are showing a very high rise.
+On the other hand, LLM and reinforcement learning, which are hot keywords in recent years, are showing a very high rise.  
+
+### Interesting facts
+- LLM Keywords Surge As ChatGPT Arrives In 2023 And It's Widely Known
+- Models such as RNN, LSTM, and GRU were frequently used for natural language processing, but there are many studies on solutions through LLM prompting, so it is thought that the frequency of keywords is not high
 
 ## Key Features (Scraping Method)
 ### Fast Scraps with *Multi-Threading*
